@@ -1,0 +1,43 @@
+<h1>About</h1>
+<p>Name: {{ name }}</p>
+<p>Age: {{ age }}</p>
+<p>Occupation: {{ occupation }}</p>
+<p>Employer: {{ employer }}</p>
+{{!-- {{#if hasAMoustache}}
+  <p>Has a moustache!</p>
+  {{else}}
+  <p>Doesn't have a moustache!</p>
+{{/if}} --}}
+{{#unless hasAMoustache}}
+  <p>Doesn't have a moustache!</p>
+  {{else}}
+  <p>Has a moustache!</p>
+{{/unless}}
+<ul>
+  {{#each pets}}
+    {{!-- <li>Name: {{this.name}}, Type : {{this.type}}</li> --}}
+    {{> pet}}
+  {{/each}}
+</ul>
+{{!-- <ul>
+  {{#each pets}}
+    {{#if @first}}      
+      <li>Name: {{name}}, Type : {{type}}</li>
+    {{/if}}
+  {{/each}}
+</ul> --}}
+<ul>
+  {{#each location}}
+    <li>{{@key}}: {{this}}</li>
+  {{/each}}
+</ul>
+<ul>
+  {{!-- {{#each location}}
+    <li>{{@key}}: {{this}}</li>
+  {{/each}} --}}
+  {{#with location}}
+    <li>Country: {{ country }}</li>
+    <li>City: {{ city }}</li>
+    <li>Neighborhood: {{ neighborhood }}</li>
+  {{/with}}
+</ul>
