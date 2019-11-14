@@ -1,0 +1,6 @@
+.DS_Store
+node_modules
+
+#You should allways tell git to ignore the .env file
+#For this specific example, we will comment that out
+# .env

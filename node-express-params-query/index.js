@@ -14,7 +14,6 @@ app.get('/post/:post_id', (req, res, next) => {
 
 app.get('/posts', (req, res, next) => {
   console.log(req.query.limit);
-  // console.log(req.query);
   res.send(`Loaded ${req.query.limit} posts`);
 });
 
