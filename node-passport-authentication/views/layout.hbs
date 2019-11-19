@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/styles/style.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="/">Home</a>
+      {{!-- Display relevant routes for non-authenticated vs. authenticated user --}}
+      {{#if user}}
+        <a href="/">{{user.name}}'s Profile</a>
+        <form action="/sign-out" method="POST">
+          <button>Sign Out</button>
+        </form>
+        {{else}}
+        <a href="/sign-in">Sign In</a>
+        <a href="/sign-up">Sign Up</a>
+      {{/if}}
+    </nav>
+    {{{body}}}
+  </body>
+</html>
