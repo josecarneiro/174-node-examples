@@ -1,3 +1,4 @@
+// We're destructuring the Router from the express object
 const { Router } = require('express');
 const router = new Router();
 

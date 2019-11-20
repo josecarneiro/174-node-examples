@@ -1,0 +1,27 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 2em; }
+
+input,
+button {
+  border: 1px solid grey;
+  font: inherit;
+  color: inherit;
+  padding: 1em; }
+
+form {
+  display: flex;
+  flex-direction: column; }
+
+nav {
+  display: flex; }
+  nav a,
+  nav button {
+    color: inherit; }
+  nav a {
+    margin-right: 2em; }
+  nav button {
+    padding: 0;
+    border: 0; }
+
+/*# sourceMappingURL=style.css.map */
