@@ -1,0 +1,39 @@
+<div id="map"></div>
+
+<ul>
+  {{#each restaurants}}
+  <li>
+  <a href="/restaurants/{{this._id}}">{{this.name}}</a>
+  </li>
+  {{/each}}
+</ul>
+
+<script>
+  const positions = [
+    {{#each restaurants}}
+    {
+      lat: {{{ this.location.coordinates.[1] }}},
+      lng: {{{ this.location.coordinates.[0] }}}
+    },
+    {{/each}}
+  ];
+
+  function initMap () {
+    const $mapContainer = document.getElementById('map');
+
+    if ($mapContainer) {
+      const map = new window.google.maps.Map($mapContainer, {
+        center: { lat: 38.9, lng: -9.1 },
+        zoom: 7
+      });
+
+      for (let position of positions) {
+        const marker = new window.google.maps.Marker({
+          position,
+          map
+        });
+      }
+
+    }
+  }
+</script>

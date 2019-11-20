@@ -1,0 +1,44 @@
+<h1>Create a single restaurant</h1>
+
+<form action="/restaurants/create" method="POST">
+  <div id="map"></div>
+  <input type="text" name="name" required placeholder="Restaurant Name" />
+  <input type="text" name="latitude" min="-90" max="90" disable required placeholder="Latitude" />
+  <input type="text" name="longitude" min="-180" max="180" disable required placeholder="Longitude" />
+  <button>Create Restaurant</button>
+</form>
+
+<script>
+  function initMap () {
+    const $mapContainer = document.getElementById('map');
+
+    const map = new window.google.maps.Map($mapContainer, {
+      center: { lat: 38.7, lng: -9.14 },
+      zoom: 12
+    });
+
+    const $inputLatitude = document.querySelector('input[name="latitude"]');
+    const $inputLongitude = document.querySelector('input[name="longitude"]');
+
+    let placedMarker;
+
+    map.addListener('click', event => {
+      const position = {
+        lat: event.latLng.lat(),
+        lng: event.latLng.lng()
+      };
+
+      $inputLatitude.value = position.lat;
+      $inputLongitude.value = position.lng;
+
+      if (placedMarker) {
+        placedMarker.setMap(null);
+      }
+
+      placedMarker = new window.google.maps.Marker({
+        position,
+        map
+      });
+    });
+  }
+</script>

@@ -1,0 +1,25 @@
+<h1>{{restaurant.name}}</h1>
+<div id="map"></div>
+
+<script>
+  const position = {
+    lat: {{{ restaurant.location.coordinates.[1] }}},
+    lng: {{{ restaurant.location.coordinates.[0] }}}
+  };
+
+  function initMap () {
+    const $mapContainer = document.getElementById('map');
+
+    if ($mapContainer) {
+      const map = new window.google.maps.Map($mapContainer, {
+        center: position,
+        zoom: 12
+      });
+
+      const marker = new window.google.maps.Marker({
+        position,
+        map
+      });
+    }
+  }
+</script>
