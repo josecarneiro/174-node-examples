@@ -1,0 +1,113 @@
+{
+  "cities": [
+    {
+      "id": 1,
+      "name": "Barcelona"
+    },
+    {
+      "id": 2,
+      "name": "Madrid"
+    },
+    {
+      "id": 4,
+      "name": "Paris"
+    },
+    {
+      "id": 230,
+      "name": "Buenos Aires"
+    },
+    {
+      "id": 1095,
+      "name": "Buenos Aires"
+    },
+    {
+      "id": 7217,
+      "name": "Buenos Aires"
+    },
+    {
+      "id": 8934,
+      "name": "Buenos Aires"
+    },
+    {
+      "name": "asdfasf",
+      "id": 19146
+    },
+    {
+      "name": "dfasdf",
+      "id": 3149
+    },
+    {
+      "name": "adfadf",
+      "id": 70705
+    },
+    {
+      "name": "asdasd",
+      "id": 97248
+    },
+    {
+      "name": "asdasdasfdsf",
+      "id": 63735
+    },
+    {
+      "name": "sdadasd",
+      "id": 27310
+    },
+    {
+      "name": "asfadasd",
+      "id": 17776
+    },
+    {
+      "name": "afsdf",
+      "id": 631
+    }
+  ],
+  "courses": [
+    {
+      "id": 1,
+      "name": "WebDev",
+      "type": "Full Time"
+    },
+    {
+      "id": 2,
+      "name": "WebDev",
+      "type": "Part Time"
+    },
+    {
+      "id": 3,
+      "name": "UX/UI",
+      "type": "Full Time"
+    },
+    {
+      "id": 4,
+      "name": "UX/UI",
+      "type": "Part Time"
+    }
+  ],
+  "bootcamps": [
+    {
+      "id": 1,
+      "cityId": 1,
+      "courseId": 1
+    },
+    {
+      "id": 2,
+      "cityId": 2,
+      "courseId": 2
+    },
+    {
+      "id": 4,
+      "cityId": 4,
+      "courseId": 2
+    },
+    {
+      "id": 5,
+      "cityId": 2,
+      "courseId": 3
+    },
+    {
+      "id": 7,
+      "cityId": 1,
+      "courseId": 3
+    }
+  ]
+}
